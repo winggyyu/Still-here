@@ -11,5 +11,12 @@
     "next": "14.0.4",
     "react": "latest",
     "react-dom": "latest"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.23",
+    "autoprefixer": "^10.4.14",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.38"
   }
 }
