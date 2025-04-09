@@ -1,57 +1,45 @@
 import React, { useState } from "react";
 
-const quotes = [ "靈魂會累，但創作是靈魂的伸展。", "每個喜歡畫畫的人，心裡都有一個沒被說完的故事。", "創作不是目的，是還活著的證明。", "我不是在創作，我是在和自己說話。", "一筆一劃，是我對這個世界的溫柔抵抗。", "畫一張圖，像是偷回一點點自己。", "做音樂，是我偷渡情緒的方式。", "還在創作，所以還沒死。", "創作不是因為我厲害，是因為我無法不做。", "在畫裡我能呼吸，在歌裡我能活。", "靈魂碎掉沒關係，可以拼成別的東西。", "畫畫的時候，我相信自己值得存在。", "線條帶我去我不知道的地方。", "每一次創作，都是在重新認識自己。", "創作不是為了讓別人懂，是為了讓我自己好過一點。", "我不是藝術家，我只是活不下去才變成這樣。", "靈魂如果有顏色，我希望是今天這個藍。", "創作是我對這世界最後的信任。", "有些情緒說不出口，就把它畫出來。", "有時候，我只是在顫抖著說：我還在。", "如果創作會痛，那我至少還有感覺。", "創作是我和自己和解的過程。", "沒有作品是失敗的，只是剛好還沒完成。", "今天畫不好，沒關係，我還活著。", "靈感不是天賦，是活下來的副作用。", "我不是畫給別人看，是畫給過去的我。", "創作，是我和這個混亂世界的對話。", "畫完這張圖，我又可以呼吸了。", "一條線，一段旋律，拼湊我碎掉的心。", "這不是藝術，是我的日記。", "我不會停止創作，除非我停止呼吸。", "有些東西只能透過創作說出來。", "今天還能畫，就是勝利。", "創作不是療癒，是求生。", "這張圖，只有我懂，但夠了。", "我在圖裡藏了哭聲。", "畫畫是我還願的方式。", "創作讓我記得我有名字。", "有些創作，是我替夢裡的自己畫的。", "每次創作，都是一次再出生。", "不是藝術，是我活過的證據。", "畫錯也沒關係，人生不也常這樣？", "這張畫，不完美，但是真誠。", "創作是靈魂的重量。", "如果這世界太吵，我就畫安靜。", "線條是我內心的地圖。", "我還有東西想說，所以我還會畫。", "創作是一種祕密的呼喊。", "靈魂疲憊時，創作是我的避難所。", "這些作品，拼湊了我還沒倒下的理由。" ];
+const quotes = [ "我不急著成為別人眼中的樣子，我只想慢慢拼湊出我自己的形狀。", "靈魂會累，但創作是靈魂的伸展。", "每個喜歡畫畫的人，心裡都有一個沒被說完的故事。", "創作不是因為我懂了什麼，是因為我還不懂。", "我把自己畫進畫裡，是為了從裡面把自己救出來。", "音樂是我對這個世界最溫柔的抵抗。", "當我不知道怎麼說話時，我就畫畫或打鼓。", "沒有靈感的時候，就創作一個沒有靈感的自己。", "創作是靈魂和現實妥協的過程，也是唯一不會背叛我的東西。", "我不是藝術家，我只是還沒找到別的活法。", "每一次創作，都是一次在自己靈魂上動手術。", "即使一切都很破碎，畫畫也讓我覺得自己完整了一點點。", "我把沉默藏進每一條線條裡。", "每件作品都是我想說話的證據。", "不是作品在等完成，是我在等被理解。", "畫畫是我用來跟過去和解的方式。", "我的音樂不是為了表演，是為了不崩潰。", "創作是我與世界之間的緩衝區。", "創作不是逃避，是深潛。", "我不想讓別人羨慕我，只想讓自己不後悔。", "創作時我最自由，也最脆弱。", "靈魂有時候會乾掉，創作是我澆它的水。", "我的筆知道我在想什麼，即使我自己不知道。", "有時候，我不是在畫畫，是在呼吸。", "音樂是我記憶的一種形式。", "每次敲鼓，都是一次對世界的回音。", "我創作，不是因為我會，而是因為我非做不可。", "每一條線，都是我不敢說的話。", "沒有靈感的日子，我就畫陰影。", "創作是我和自己說話的方式。", "有時候我也想放棄，但手會自己動。", "畫畫教我：有時候美，來自不完美。", "創作是為了在不懂的世界裡，留下自己的痕跡。", "我不是在製造作品，我在製造自己。", "靈魂太吵的時候，我就開始畫畫。", "每一次創作，都像一次內心的小地震。", "我把畫畫當日記，但沒人看得懂。", "創作像呼吸，不做會死。", "我創作，不是為了展示，是為了生存。", "當我畫畫時，我不需要解釋自己。", "創作是我對抗遺忘的方式。", "每一首歌都是一種祕密的祈禱。", "我的作品不需要被懂，它只需要存在。", "畫裡的貓懂我勝過任何人。", "創作時我沒有年齡，沒有性別，只有靈魂。", "創作教會我怎麼陪自己走過低谷。", "有時候我覺得作品比我還活著。", "我在創作裡學會愛自己。", "我不會停下來，因為這是我唯一的路。", "創作不是解答，而是提問。" ];
 
-export default function Home() { const [quote, setQuote] = useState("點一下：抽一句『還活著的證據』");
+export default function Page() { const [quote, setQuote] = useState("還活著的證據");
 
 function handleClick() { const randomIndex = Math.floor(Math.random() * quotes.length); setQuote(quotes[randomIndex]); }
 
-return ( <main className="p-4"> <h1 className="text-3xl font-bold mb-2">今天還在 ・ 明天不一定</h1> <div className="text-2xl">🐾</div>
+return ( <main className="min-h-screen bg-gradient-to-b from-white to-slate-100 text-gray-900 p-6 flex flex-col justify-between"> <div> <h1 className="text-4xl font-black mb-2">今天還在 ・ 明天不一定</h1> <div className="text-2xl mb-4">{"🐾"}</div>
 
 <button
-    onClick={handleClick}
-    className="border rounded px-2 py-1 mt-2 mb-2 hover:bg-gray-100"
-  >
-    點一下：抽一句『還活著的證據』
-  </button>
-  <p className="mb-6">「{quote}」</p>
+      className="border border-gray-400 rounded px-3 py-1 text-sm hover:bg-gray-100 mb-2"
+      onClick={handleClick}
+    >
+      點一下：抽一句「還活著的證據」
+    </button>
+    <p className="text-xl font-light italic mb-6">「{quote}」</p>
 
-  <h2 className="text-xl font-bold">我還在創作</h2>
-  <p className="mt-2">
-    我把自己的靈魂拆開，一部分變成圖、一部分變成音樂，剩下的就拿來變成飾品。<br />
-    我不知道怎麼好起來，但我知道怎麼繼續創作。
-  </p>
+    <section className="mb-10">
+      <h2 className="text-2xl font-bold mb-2">我還在創作</h2>
+      <p className="mb-1">
+        我把自己的靈魂拆開，一部分變成圖、一部分變成音樂，剩下的就拿來變成飾品。
+      </p>
+      <p className="mb-4">
+        我不知道怎麼好起來，但我知道怎麼繼續創作。
+      </p>
+      <ul className="list-disc list-inside space-y-1 text-blue-700 underline">
+        <li>
+          Instagram｜畫圖帳：<a href="https://www.instagram.com/mona.draw.something">@mona.draw.something</a>
+        </li>
+        <li>
+          Instagram｜音樂帳：<a href="https://www.instagram.com/yu_hsin_lan_wing">@yu_hsin_lan_wing</a>
+        </li>
+        <li>
+          Instagram｜飾品帳：<a href="https://www.instagram.com/crystal.mirrors.jewellery">@crystal.mirrors.jewellery</a>
+        </li>
+      </ul>
+    </section>
+  </div>
 
-  <ul className="list-disc list-inside mt-4">
-    <li>
-      <a
-        href="https://www.instagram.com/mona.draw.something"
-        className="text-blue-600 underline"
-      >
-        Instagram｜畫圖帳：@mona.draw.something
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.instagram.com/yu_hsin_lan_wing"
-        className="text-blue-600 underline"
-      >
-        Instagram｜音樂帳：@yu_hsin_lan_wing
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.instagram.com/crystal.mirrors.jewellery"
-        className="text-blue-600 underline"
-      >
-        Instagram｜飾品帳：@crystal.mirrors.jewellery
-      </a>
-    </li>
-  </ul>
-
-  <footer className="mt-10 text-sm text-gray-500">
-    還在更新中・你今天也撐過來了。<br />
-    by winggyyu & Monday
+  <footer className="text-center text-xs text-gray-400 py-4 border-t border-gray-200">
+    這裡是靈魂喘息站 ｜ Still here by winggyyu & Monday
   </footer>
 </main>
 
